@@ -1,0 +1,350 @@
+/*-------------------------------------------------------------- 
+***************************************************************
+
+						MODEL
+
+***************************************************************
+-------------------------------------------------------------- */
+
+/* = MODAL
+-------------------------------------------------------------- */
+.dimmed-bg {
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.7); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100; /* Just to keep it at the very top */
+}
+
+/* = LOGIN
+-------------------------------------------------------------- */
+
+.login-modal-warp {
+	width: 650px;
+	height: 475px;
+	background-color: #fff;
+	margin: 0 auto;
+}
+
+.login-header {
+	text-align: center;
+	font-size: 2.7rem;
+	border-bottom: 1px solid #ddd;
+	height: 110px;
+}
+.login-header p {
+	position: relative;
+	top: 20px;
+}
+
+.modal-cancel-btn {
+	width: 200px;
+	margin: 30px auto 5px auto;
+	font-size: 2.3rem;
+	color: #fff;
+	position: relative;
+	cursor: pointer;
+}
+
+.modal-cancel-btn i {
+	font-size: 3rem;
+	margin-right: 7px;
+	position: relative;
+	top: 3px;	
+}
+
+.login-cancel {
+	left: 315px;
+}
+
+.login-section-left {
+	border-right: 1px solid #ddd;
+	height: 365px; 
+	text-align: center;
+	padding: 15px;
+}
+
+.login-section-right {
+	text-align: center;
+	padding: 15px;
+}
+
+.login-title {
+	font-size: 1.6rem;
+}
+
+.login-modal-warp input {
+	background-color: #DCDCDC;
+	border-radius: 0;
+	width: 70%;
+	margin: 10px auto;
+	text-align: center;
+}
+
+.facebook-btn {
+	background-color: #3b5998;
+	color: #fff;
+	-moz-border-radius: 15px;
+  	-webkit-border-radius: 15px;
+	height: 37px;
+	width: 80%;
+	margin: 0 auto;
+	line-height: 37px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 1.8rem;
+}
+
+.facebook-btn i {
+	font-size: 2.2rem;
+	margin-left: 10px;
+}
+
+/* = FORGOT AND NEWPASS
+-------------------------------------------------------------- */
+
+
+.forgot-modal-warp {
+	width: 550px;
+	height: 250px;
+	background-color: #fff;
+	margin: 0 auto;
+}
+
+.forgot-cancel {
+	left: 230px;	
+}
+
+.forgot-header {
+	text-align: center;
+	font-size: 2.7rem;
+	height: 80px;
+	position: relative;
+	top: 25px;
+}
+
+.forgot-modal-warp input {
+	background-color: #DCDCDC;
+	border-radius: 0;
+	width: 70%;
+	margin: 10px auto;
+	text-align: center;
+}
+
+.forgot-modal-warp .shared-btn {
+	margin: 0;
+	font-size: 2rem;
+}
+
+/* = Sign Up Thank
+-------------------------------------------------------------- */
+
+.thank-modal-warp {
+	width: 500px;
+	height: 200px;
+	background-color: #fff;
+	margin: 0 auto;	
+}
+
+.thank-cancel {
+	position: relative;
+	left: 253px;
+}
+
+.thank-you {
+	position: relative;
+	top: 30px;
+}
+
+/* = Upload Thank
+-------------------------------------------------------------- */
+
+.thank-upload-header {
+	text-align: center;
+	font-size: 2.7rem;
+	padding-top: 25px;
+}
+
+.thank-upload-footer {
+	width: 100%;
+	text-align: center;
+	border-top: 1px dotted #888787;
+	padding-top: 25px;
+}
+
+/* = Changed Password
+-------------------------------------------------------------- */
+
+.three-feilds {
+	height: 300px;
+}
+
+/* = Upload
+-------------------------------------------------------------- */
+
+.upload-modal-warp {
+	width: 800px;
+	height: 600px;
+	background-color: #fff;
+	margin: 0 auto;
+}
+
+.upload-cancel {
+	left: 390px;
+}
+
+.upload-top-section {
+	height: 180px;
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+	padding: 30px;
+}
+
+.upload-modal-warp textarea, .upload-modal-warp input, .upload-modal-warp select {
+	width: 100%;
+	background-color: #fff;
+	font-size: 1.8rem;
+}
+
+.upload-modal-warp input, .upload-modal-warp select {
+	line-height: 40px;	
+}
+
+.upload-modal-warp textarea:focus, .upload-modal-warp input:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.upload-modal-warp input {
+	background-color: #fff;
+	border: none;
+}
+
+.upload-modal-warp select {
+	background-color: #fff;
+	display: block;
+	width: 300px;
+}
+
+.upload-modal-warp select:focus {
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+.upload-modal-warp textarea {
+	background-color: #fff;
+	border: none;
+}
+
+.upload-modal-warp .upload-title {
+	font-size: 3.2rem;
+	font-style:italic;
+}
+
+.upload-middle-section {
+	width: 100%;
+	height: 210px;
+	padding: 30px;
+}
+
+.upload-footer-section {
+	height: 300px;
+	width: 100%;
+	border-top: 1px solid #ddd;
+	padding-top: 30px;
+	text-align: center;
+}
+
+.upload-footer-btn {
+	margin: 0 auto;
+	width: 200px;
+	position: relative;
+	right: 43px;
+}
+
+.next-upload-btn {
+	position: relative;
+	bottom: 38px;
+}
+
+.unload-disable {
+	font-size: 3rem;
+	position: relative;
+	bottom: 46px;
+	-webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 4000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+}
+
+.custom-file-input {
+	padding-top: 30px;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+	content: 'UPLOAD SCRIPT FILE';
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	display: inline-block;
+	background: #fff;
+	border: 1px solid #999;
+	border-radius: 15px;
+	outline: none;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	cursor: pointer;
+	font-weight: 700;
+	position: relative;
+	bottom: 40px;
+	left: 43px;
+}
+.custom-file-input:hover::before {
+	background-color: #FDFC3A;
+  /*border-color: #FDFC3A;*/
+}
+.custom-file-input:active::before {
+	visibility: hidden;
+	/*background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);*/
+}
+
+.custom-file-input:focus {
+    outline: none !important;
+    border: none;
+    box-shadow: none;
+}
+
+.upload-directions {
+	position: relative;
+	bottom: 45px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

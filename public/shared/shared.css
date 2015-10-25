@@ -1,0 +1,434 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,200italic,300italic,400italic);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
+
+@font-face {
+    font-family: "Redacted";
+    src: url("/shared/fonts/web/redacted-script-regular.eot");
+    src: url("/shared/fonts/web/redacted-script-regular.woff") format("woff"),
+         url("/shared/fonts/web/redacted-script-regular.otf") format("opentype"),
+         url("/shared/fonts/web/redacted-script-regular.svg#filename") format("svg");
+}
+
+@font-face {
+    font-family: "CooperHewitt";
+    font-weight: 300;
+    src: url("/shared/fonts/CooperHewitt-OTF/CooperHewitt-Thin.otf") format("opentype");
+}
+@font-face {
+    font-family: "CooperHewitt";
+    font-weight: 400;
+    src: url("/shared/fonts/CooperHewitt-OTF/CooperHewitt-Light.otf") format("opentype");
+}
+@font-face {
+    font-family: "CooperHewitt";
+    font-weight: 500;
+    src: url("/shared/fonts/CooperHewitt-OTF/CooperHewitt-Medium.otf") format("opentype");
+}
+/*@font-face {
+    font-family: "CooperHewitt";
+    font-weight: 500;
+    src: url("/shared/fonts/CooperHewitt-OTF/CooperHewitt-Heavy.otf") format("opentype");
+}*/
+@font-face {
+    font-family: "CooperHewittBook";
+    src: url("/shared/fonts/CooperHewitt-OTF/CooperHewitt-Book.otf") format("opentype");
+}
+
+/*
+COLORS
+****************
+YELLOW: #FDFC3A;
+GRAY: #888787;
+*/
+
+
+/*-------------------------------------------------------------- 
+***************************************************************
+
+					ELEMENTS & PARTS
+
+***************************************************************
+-------------------------------------------------------------- */
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	position: relative;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	color: #888787;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+button:focus {outline:0;}
+
+.pointer {
+	cursor: pointer;
+}
+.font-italic {
+	font-style: italic;
+}
+
+.font-serif {
+	font-family: 'Roboto Slab', serif;
+}
+
+.help-block {
+	display: none;
+}
+
+/*.has-error .form-control {
+	border-color: #FDFC3A;
+}*/
+
+.has-error .help-block {
+	display: block;
+}
+
+.error-color {
+	color: #FDFC3A;
+}
+
+.margin-left {
+	margin-left: 10px;
+}
+
+
+.icon-spin {
+	-webkit-animation:icon-spin 2s infinite linear;
+	animation:icon-spin 2s infinite linear
+}
+@-webkit-keyframes icon-spin{
+	0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+	100%{-webkit-transform:rotate(359deg);
+	transform:rotate(359deg)}
+}
+@keyframes icon-spin{
+	0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+	100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}
+}
+
+/*-------------------------------------------------------------- 
+***************************************************************
+
+						HEADER
+
+***************************************************************
+-------------------------------------------------------------- */
+.main-page-wrap header {
+	height: 80px;
+	width: 100%;
+	background-color: #fff;
+}
+
+.header-wrap {
+	width: 1100px;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.website-title {
+	margin: 0;
+	line-height: 80px;
+	font-size: 4rem;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 300;
+	display: inline-block;
+	width: 150px;
+	vertical-align: top;
+	cursor: pointer;	
+}
+
+.header-nav {
+	display: inline-block;
+	width: 591px;
+	vertical-align: top;
+}
+
+.user-session {
+	display: inline-block;
+	width: 350px;
+	vertical-align: top;
+	float: right;
+	position: relative;
+}
+
+
+.navbar-nav li a {
+	line-height: 80px;
+	padding: 0 15px;
+	width: 118px;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 300;
+	border-right: 1px solid #CCC;
+	color: #000;
+}
+
+.header-avatar .user-name {
+	line-height: 80px;
+	font-size: 2.3rem;
+	position: relative;
+	top: 5px;
+	color: #888787;
+}
+
+.header-avatar img {
+	margin-right: 2px;
+	width: 50px;
+	border-radius: 50%;
+	position: relative;
+	bottom: 5px;
+}
+
+.header-avatar .shared-btn {
+	font-size: 1.8rem;
+}
+
+.header-avatar .user-options {
+	position: relative;
+	font-size: 2.3rem;
+	cursor: pointer;
+}
+
+.user-options-wrap {
+	position: absolute;
+	width: 120px;
+	height: 40px;
+	background-color: #CFCFCF;
+	left: 154px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 1.8rem;
+	cursor: pointer;
+}
+
+.active {
+	background-color: #eee;
+}
+
+
+/*-------------------------------------------------------------- 
+***************************************************************
+
+						BUTTONS
+
+***************************************************************
+-------------------------------------------------------------- */
+.shared-btn {
+	border: 1px solid #000;
+	-moz-border-radius: 15px;
+  	-webkit-border-radius: 15px;
+	height: 30px;
+	width: auto;
+	padding: 0 10px;
+	display: inline-block;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+	background-color: #fff; 
+}
+
+.shared-btn:hover{
+	background-color: #FDFC3A;
+}
+
+
+.signup-header-btn {
+	margin-top: 23px;
+	font-size: 1.8rem;
+}
+
+
+/*-------------------------------------------------------------- 
+***************************************************************
+
+						SCRIPT CONTENT
+
+***************************************************************
+-------------------------------------------------------------- */
+
+.script-title {
+	font-size: 3.5rem;
+	font-style: italic;
+	font-family: 'Roboto Slab', serif;
+}
+
+.script-action-bar {
+	font-size: 2rem;
+	font-weight: 200;
+	line-height: 54px;
+}
+
+.script-action-bar i {
+	font-size: 3rem;
+	position: relative;
+	top: 3px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.script-action-bar .ion-ios-star {
+	color: #FEFC3A;
+}
+
+.trending-stats {
+	font-size: 1.2rem;
+	font-weight: 400;
+	margin-left: 10px;
+	color: #888787;
+}
+
+/*-------------------------------------------------------------- 
+***************************************************************
+
+						ANIMATION
+
+***************************************************************
+-------------------------------------------------------------- */
+
+.modal-fade {
+    -webkit-animation: fadein 0.6s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.6s; /* Firefox < 16 */
+        -ms-animation: fadein 0.6s; /* Internet Explorer */
+         -o-animation: fadein 0.6s; /* Opera < 12.1 */
+            animation: fadein 0.6s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+
+/*-------------------------------------------------------------- 
+***************************************************************
+
+						FOOTER
+
+***************************************************************
+-------------------------------------------------------------- */
+
+footer {
+	background-color: #000;
+	color: #fff;
+	width: 100%;
+	height: 200px;
+	padding: 25px 180px;
+}
+
+.big-dot {
+	display: inline-block;
+	width: 4px;
+	height: 4px;
+	background-color: #454545;
+	border-radius: 50%;
+	margin: 0 5px 2px 5px;
+}
+
+.terms {
+	text-align: center;
+	color: #454545;
+	font-style: italic;
+	font-size: 1.5rem;
+	margin-top: 20px;
+}
+
+
+
+/* =Media Queries
+-------------------------------------------------------------- */
+@media (max-width: 1200px) {
+	.responsive-remove-words {display: none}
+}
+
+/* Portrait tablets and medium desktops */
+@media (max-width: 1050px) {
+	header {padding: 0 100px;}
+	footer {padding: 25px 100px;}
+	.trending-script-section {padding: 0 100px;}
+	.featured-read-wrap {padding: 10px 100px 20px 100px;}
+	.featured-title {font-size: 6rem;}
+	/*TODO fix Navbar*/
+	.navbar-nav {display: none}
+	.header-avatar {display: none}
+}
+
+/* Portrait tablets and small desktops */
+@media (max-width: 950px) {
+	header {padding: 0 80px;}
+	footer {padding: 25px 80px;}
+	.trending-script-section {padding: 0 80px;}
+	.featured-read-wrap {padding: 10px 80px 20px 80px;}
+	.featured-title {font-size: 5rem;}
+	/*REMOVE*/
+	.sponsor-title {display: none;}
+	.sponsor-section {display: none;}
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 675px) {
+	header {padding: 0 50px;}
+	footer {padding: 25px 50px;}
+	.trending-script-section {padding: 0 50px;}
+	.featured-read-wrap {padding: 10px 50px 20px 50px;}
+	.featured-title {font-size: 4rem;}
+}
+
+/* Phones and down */
+@media (max-width: 480px) {
+	.featured-title {font-size: 3rem;}
+}

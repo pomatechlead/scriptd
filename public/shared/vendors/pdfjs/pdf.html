@@ -1,0 +1,24 @@
+<div class="pdf-nav-wrap">
+	<nav ng-class="getNavStyle(scroll)">
+
+	<div class="page-number">
+		<span class="font-italic font-serif">Page </span>
+		<input class="script-page-input" type="text" min=1 ng-model="pageNum">
+		<span class="font-italic font-serif"> of {{pageCount}}</span>
+	</div>
+	<div class="page-control">
+		<button ng-click="goPrevious()"><i class="ion-android-arrow-back"></i></button>
+		<button ng-click="goNext()"><i class="ion-android-arrow-forward"></i></button>
+	</div>
+	<div class="page-zoom"> 
+		<button ng-click="zoomIn()">+</span></button>
+		<button ng-click="zoomOut()">-</span></button>
+	</div>
+
+	</nav>
+</div>
+
+<hr class="pdf-hr">
+<div class="pdf-container">
+	<canvas id="pdf" class="rotate0"></canvas>
+</div>

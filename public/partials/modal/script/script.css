@@ -1,0 +1,94 @@
+/* = SCRIPTS MODEL
+-------------------------------------------------------------- */
+
+.script-modal-warp {
+	width: 900px;
+	height: 900px;
+	background-color: #fff;
+	margin: 0 auto;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	padding-bottom: 100px;
+}
+
+.script-cancel {
+	left: 440px;
+}
+
+.script-modal-header {
+	padding: 25px 30px 20px 30px;
+	border-bottom: 1px dotted #888787;
+}
+
+.script-modal-middle {
+	border-bottom: 1px dotted #888787;
+}
+
+.script-modal-section-padding {
+	padding: 20px 30px;
+}
+
+.log-wrapper {
+	background-color: #E8E6E7;
+}
+
+.log-wrapper h4 {
+	color: #888787;
+	font-weight: 300;
+	font-size: 2rem;
+}
+
+.log-wrapper p {
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+
+.script-modal-body {
+	position: relative;
+}
+
+.script-modal-body .script-preview-title {
+	color: #888787;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	font-size: 2rem;
+	font-weight: 300;
+}
+
+/* = MODAL FOOTER
+-------------------------------------------------------------- */
+.script-modal-footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 70px;
+	background-color: #FDFC3A;
+}
+
+.footer-modal-btn-wrap {
+	width: 380px;
+	margin: 15px auto;
+}
+
+.footer-modal-btn {
+	color: #6B6C13;
+	border: 1px solid #6B6C13;
+	-moz-border-radius: 15px;
+  	-webkit-border-radius: 15px;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	font-size: 1.7rem;
+	padding: 7px 10px;
+	margin-right: 10px;
+} 
+
+.footer-modal-btn i {
+	margin-right: 5px;
+}
+
+.footer-modal-btn:hover {
+	background-color: #000;
+	color: #FFF;
+}

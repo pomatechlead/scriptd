@@ -1,0 +1,75 @@
+<div class="main-page-wrap">
+<header>
+  <div class="header-wrap">
+    <div class="website-title" ng-click="shared.goHome()">
+      scriptd
+    </div>
+
+    <div class="header-nav">
+      <ul class="nav navbar-nav">
+        <li ng-class="main.navClass('main')"><a href='#/main'>TRENDING</a></li>
+        <li ng-class="main.navClass('recent')"><a href='#/'>RECENT</a></li>
+        <li ng-class="main.navClass('film')"><a href='#/'>FILM</a></li>
+        <li ng-class="main.navClass('tv')"><a href='#/'>TV</a></li>
+        <li ng-class="main.navClass('tv')"><a style="border: none" href='#/'>WEB</a></li>
+      </ul>
+    </div>
+
+    <div class="user-session">
+
+      <div ng-show="shared.logged" class="header-avatar">
+        <span ng-click="shared.goUserProfile()" class="pointer">
+          <img ng-src="{{shared.currentUser.avatarImg}}">
+          <span class="user-name">{{shared.currentUser.displayName}}</span>
+        </span>
+        <div class="shared-btn margin-left" ng-show="shared.uploadBtn" ng-click="shared.uploadScriptMain()"><i class="ion-android-add"> Upload</i></div>
+        <div class="shared-btn margin-left" ng-show="shared.editBtn" ng-click="shared.editUser()">Edit Profile</div>
+        <i class="ion-android-arrow-dropdown user-options" ng-click="shared.showOptions()"></i>
+        <div ng-show="shared.userOptions" class="user-options-wrap">
+          <a href="/auth/signout">Logout <i class="ion-log-out"></i></a>
+        </div>
+      </div>
+
+      <div ng-show="shared.notLog" class="shared-btn signup-header-btn" ng-click="shared.loginModal()">
+        Sign Up / Login
+      </div>
+
+    </div>
+  </div>
+
+</header>
+
+
+
+
+<div ui-view></div>
+
+
+
+
+<footer>
+<div class="row">
+  <div class="col-md-8">
+
+  </div>
+  <div class="col-md-2">
+    <ul>
+      <li>HOME</li>
+      <li>FAQs</li>
+      <li>ABOUT</li>
+    </ul>
+  </div>
+  <div class="col-md-2">
+    <ul>
+      <li>TRENDING</li>
+      <li>TV</li>
+      <li>FILM</li>
+    </ul>
+  </div>
+</div>
+
+<div class="row terms">
+  Privacy Policy <div class="big-dot"></div> Terms of Use
+</div>
+</footer>
+</div>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="scriptd">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>scriptd</title>
+    <link rel="shortcut icon" type="/img/png" href="#"/>
+    <!-- Styles -->
+    <link href="//code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/shared/shared.css" rel="stylesheet">
+    <link href="/partials/main/main.css" rel="stylesheet">
+    <link href="/partials/main/profile/profile.css" rel="stylesheet">
+    <!-- MODALS -->
+    <link href="/partials/modal/modal.css" rel="stylesheet">
+    <link href="/partials/modal/script/script.css" rel="stylesheet">
+
+    <link href="/partials/other/create.user/create.css" rel="stylesheet">
+    <link href="/partials/other/upload/upload.page.css" rel="stylesheet">
+    <!-- PDF STYLES -->
+    <link href="/shared/vendors/pdfjs/pdf.css" rel="stylesheet">
+  </head>
+
+  <body ng-controller="SharedCtrl as shared">
+
+      <div ui-view></div>
+
+
+    <!-- jQuery & Angular -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.js"></script>
+    <!-- PDF VENDOR -->
+    <script src="shared/vendors/pdfjs/pdf.js"></script>
+    <script src="shared/vendors/pdfjs/angular-pdf.js"></script>
+    <script src="shared/vendors/imageupload.js"></script>
+
+    <!-- Scripts -->
+    <script src="/shared/app.module.js"></script>
+    <!-- directives -->
+    <script src="/shared/directives/goBack.directive.js"></script>
+    <script src="/shared/directives/showErrors.directive.js"></script>
+    <script src="/shared/directives/passwordVerify.directive.js"></script>
+    <script src="/shared/directives/pending.directive.js"></script>
+    <script src="/shared/directives/dateInput.directive.js"></script>
+    <script src="/shared/directives/fileInput.directive.js"></script>
+    <script src="/shared/directives/toggleClass.directive.js"></script>
+
+    <!-- Controllers -->
+    <script src="/shared/controllers/shared.ctrl.js"></script>
+    <script src="/partials/main/main.ctrl.js"></script>
+    <script src="/partials/main/home/home.ctrl.js"></script>
+    <script src="/partials/main/profile/profile.ctrl.js"></script>
+    <script src="/partials/modal/modal.ctrl.js"></script>
+    <script src="/partials/modal/script/script.ctrl.js"></script>
+    <script src="/partials/modal/login/login.ctrl.js"></script>
+    <script src="/partials/modal/login/signup.ctrl.js"></script>
+    <script src="/partials/modal/forgot/forgot.ctrl.js"></script>
+    <script src="/partials/modal/reset/reset.ctrl.js"></script>
+    <script src="/partials/modal/newPassword/new.password.ctrl.js"></script>
+    <script src="/partials/modal/upload/upload.ctrl.js"></script>
+    <script src="/partials/other/edit.user/edit.ctrl.js"></script>
+    <script src="/partials/other/create.user/create.ctrl.js"></script>
+    <script src="/partials/other/social.user/social.ctrl.js"></script>
+    <script src="/partials/other/upload/upload.ctrl.js"></script>
+    <!-- Services -->
+    <script src="/shared/services/scripts.service.js"></script>
+    <script src="/shared/services/main.service.js"></script>
+    <script src="/shared/services/user.service.js"></script>
+
+  </body>
+</html>

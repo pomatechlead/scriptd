@@ -1,0 +1,23 @@
+<div class="modal-cancel-btn forgot-cancel" ng-click="shared.closeModal()">
+	<i class="ion-ios-close-outline"></i><span class="font-italic">Never Mind</span>
+</div>
+
+<div class="forgot-modal-warp modal-fade">
+	<div class="forgot-header">
+		<p class="font-italic">Please Provide a New Password</p>
+		<form name="newPassForm" novalidate>
+			<div class="form-group" show-errors>
+				<input type="password" class="form-control" name="newPass" ng-model="new.pass.newPassword" placeholder="PASSWORD" required>
+				<p class="help-block" ng-if="newPassForm.newPass.$error.required">Stuff Required</p>
+			</div>
+			<div class="form-group" show-errors>
+				<input type="password" class="form-control" name="newPassTwo" ng-model="new.pass.verifyPassword" placeholder="REPEAT PASSWORD" required>
+				<p class="help-block" ng-if="newPassForm.newPassTwo.$error.passwordVerify">Passwords do not match</p>
+			</div>
+			<div class="shared-btn" ng-click="new.newPass(new.pass)" pending>
+				CONFIRM
+			</div>
+		</form>
+	</div>
+
+</div>

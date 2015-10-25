@@ -1,0 +1,56 @@
+<div class="modal-cancel-btn login-cancel" ng-click="shared.closeModal()">
+	<i class="ion-ios-close-outline"></i><span class="font-italic">Cancel</span>
+</div>
+<div class="login-modal-warp modal-fade">
+	<div class="login-header">
+		<p class="font-italic">Please Sign Up or Log In<br>to Continue</p>
+	</div>
+
+
+	<div class="col-sm-6 login-section-left" ng-controller="SignupFormCtrl as sign">
+		<p class="login-title">DON'T HAVE AN ACCOUNT?</p>
+		<p class="font-italic">It's free and easy to join!</p>
+		<a href="/auth/facebook"><div class="facebook-btn">
+			CONNECT WITH <i class="ion-social-facebook"></i>
+		</div></a>
+		<p class="login-title">OR</p>
+		<form name="signupForm" novalidate>
+			<div class="form-group" show-errors>
+				<input class="form-control" name="signupEmail" ng-model="sign.signup.email" placeholder="EMAIL" required>
+				<!-- <p class="help-block" ng-if="signupForm.signupEmail.$error.required">Feilds Required</p> -->
+			</div>
+			<div class="form-group" show-errors>
+				<input class="form-control" name="signupUsername" ng-model="sign.signup.fullName" placeholder="FULL NAME" required>
+				<p class="help-block" ng-if="signupForm.signupUsername.$error.required || signupForm.signupEmail.$error.required">Oops, please fill out missing info.</p>
+			</div>
+			<p>This that or the other</p>
+			<button class="shared-btn" ng-click="sign.signUp(sign.signup)">
+				SIGN UP
+			</button>
+		</form>
+	</div>
+
+
+	<div class="col-sm-6 login-section-right" ng-controller="LoginModalCtrl as log">
+		<p class="login-title">ALREADY HAVE AN ACCOUNT?</p>
+		<p class="font-italic">Welcome back, friend!</p>
+		<a href="/auth/facebook"><div class="facebook-btn">
+			LOG IN WITH <i class="ion-social-facebook"></i>
+		</div></a>
+		<p class="login-title">OR</p>
+		<form name="loginForm" novalidate>
+			<div class="form-group" show-errors>
+				<input type="text" class="form-control" name="loginUsername" ng-model="log.user.username" placeholder="USERNAME" required>
+			</div>
+			<div class="form-group" show-errors>
+				<input type="password" class="form-control" name="loginPassword" ng-model="log.user.password" placeholder="PASSWORD" required>
+				<p class="help-block" ng-if="loginForm.loginPassword.$error.required || loginForm.loginUsername.$error.required">Oops, please fill out missing info.</p>
+			</div>
+			<p ng-click="log.forgot()" style="cursor: pointer;">Forgot your password?</p>
+			<button class="shared-btn" ng-click="log.login(log.user)">
+				LOG IN
+			</button>
+		</form>
+	</div>
+	
+</div>

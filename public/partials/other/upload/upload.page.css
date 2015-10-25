@@ -1,0 +1,147 @@
+.upload-page-wrap {
+	width: 100%;
+}
+
+.upload-page-wrap header {
+	background-color: #fff;
+}
+
+.upload-header-title {
+	width: 800px;
+	margin: 0 auto;
+	font-style: italic;
+	height: 70px;
+	line-height: 70px;
+	font-family: 'Roboto Slab', serif;
+}
+
+.upload-header-title p {
+	text-align: center;
+	font-weight: 500;
+	font-size: 3rem;
+}
+
+.upload-page-cancel {
+	position: absolute;
+	right: 0;
+	bottom: 70px;
+	font-family: 'Roboto Slab', serif;
+	color: #888787;
+	font-size: 1.8rem;
+	cursor: pointer;
+}
+
+.upload-page-cancel i {
+	font-size: 2.7rem;
+	position: relative;
+	top: 3px;
+}
+
+.dotted-line {
+	width: 100%;
+	border-top: 1px dotted #888787;
+}
+
+.upload-confirm-row {
+	position: relative;
+	width: 800px;
+	margin: 0 auto;
+	height: 50px;
+	padding: 8px 0
+}
+
+.file-name {
+	display: inline-block;
+	line-height: 3px;
+	color: #888787;
+	font-weight: 300;
+}
+
+.file-name span {
+	color: #000;
+	font-family: 'Roboto Slab', serif;
+	font-style: italic;
+	font-weight: 400;
+}
+
+.confirm-btn {
+	float: right;
+}
+
+.upload-preview-section {
+	width: 100%;
+	background-color: #888787;
+}
+
+.upload-preview-directions {
+	padding: 25px 0;
+	text-align: center;
+	color: #fff;
+	font-family: 'Roboto Slab', serif;
+	font-style: italic;
+	font-weight: 300;
+}
+
+/*upload-pdf-view*/
+
+
+.upload-pdf-view {
+	width: 900px;
+	min-height: 900px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.upload-pdf-view canvas {
+/*	position: relative;
+	bottom: 159px;*/
+}
+
+
+
+
+/*.upload-pdf-view object {
+	width: 100%;
+	height: 1000px;
+	margin: 0 auto;
+}*/
+ 
+/*.upload-img-section {
+	width: 1205px;
+	margin: 0 auto;
+}
+
+.upload-img-wrap {
+	display: inline-block;
+	margin: 40px;
+	position: relative;
+}
+
+.upload-preview-section img {
+	width: 320px;
+}
+
+.page-number {
+	border-radius: 50%;
+	border: 1px solid #000;
+	width: 40px;
+	height: 40px;
+	background-color: #FDFC3A; 
+	color: #000;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 2rem;
+}
+*/
+
+
+
+
+
+
+
+
+

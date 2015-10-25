@@ -1,0 +1,100 @@
+
+<div class="search-bar-wrap">
+
+</div>
+
+<div class="featured-read-section">
+<div class="featured-read-wrap">
+	<img class="bg-img" src="/shared/img/couch.jpg" alt="">
+	<p class="featured-read-words">FEATURED READ</p>
+	<h1 class="font-italic featured-title">Thanks A Lot, Mom</h1>
+	<div class="row user-snap">
+		<div class="col-md-5">
+			<img src="http://img4.wikia.nocookie.net/__cb20140630173928/shrek/images/thumb/0/09/Chris-farley.jpg/250px-Chris-farley.jpg">
+			<span>by</span> Gabi Conti
+		</div>
+		<div class="col-md-5">
+			<i class="ion-ios-pricetag-outline"></i>
+			<span class="font-italic">Fiction, Romance</span>
+		</div>
+		<div class="col-md-2">
+			<div class="read-btn">
+				<p><i class="ion-ios-book-outline"></i> READ</p>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="trending-script-section">
+<div class="trending-script-wrap">
+	<div class="row treding-top-section">
+		<div class="col-md-8">
+			<h3>TRENDING SCRIPTS</h3>
+			FILTER BY:
+			<select class="form-control">
+			  <option>FILM</option>
+			  <option>TV</option>
+			  <option>WEB</option>
+			</select>
+		</div>
+		<div class="col-md-4">
+			<h4 class="sponsor-title">SPONSORS</h4>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8">
+			<div class="trend-script-wrap" ng-repeat="script in home.showMainScripts">
+				<h4 class="script-title" ng-click="home.checkOutScript(script)">{{script.title}}</h4>
+				<p class="">{{script.description | limitTo: 380}}</p>
+				</span>
+				<div class="row user-snap">
+					<div class="col-md-5 pointer" ng-click="shared.findUser(script.author._id)">
+						<img ng-src="{{script.author.avatarImg}}">
+						<span class="font-italic">by</span> {{script.author.firstName}} {{script.author.lastName}}
+					</div>
+					<div class="col-md-7">
+						<i class="ion-ios-pricetag-outline"></i>
+						<span class="font-italic">{{script.type}}</span>
+					</div>
+				</div>
+				<div class="row script-action-bar">
+					<div class="col-md-4">
+						<!-- If favMatch === true show solid star -->
+						<span ng-if="script.favMatch"><i class="ion-android-star" ng-click="home.removeFavorite(script._id)"></i></span>
+						<!-- If favMatch === false show empty star -->
+						<span ng-if="!script.favMatch"><i class="ion-android-star-outline" ng-click="home.addFavorite(script._id)"></i></span>
+						Favorite
+						<span class="trending-stats">{{script.favorites.length}} <span class="responsive-remove-words">Favorited</span></span>
+					</div>
+					<div class="col-md-4">
+						<i class="ion-social-usd-outline"></i>
+						Purchased
+						<span class="trending-stats">{{script.purchases.length}} <span class="responsive-remove-words">Purchased</span></span>
+					</div>
+					<div class="col-md-4">
+						<i class="ion-ios-circle-outline"></i>
+						Rights
+						<span class="trending-stats">Not <span class="responsive-remove-words">Acquired</span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="sponsor-section">
+				<div class="sponsor-wrap">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<div ui-view></div>
+
+
+
+
+
+

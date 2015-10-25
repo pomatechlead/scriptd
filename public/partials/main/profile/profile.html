@@ -1,0 +1,95 @@
+<div class="profile-section">
+	<div class="profile-wrap">
+		<div class="user-info-wrap">
+			<div class="profile-avatar-ring">
+				<div class="profile-avatar">
+					<img ng-src="{{profile.profileData.avatarImg}}">
+				</div>
+			</div>
+			<h1>{{profile.profileData.displayName}}</h1>
+			<p class="">{{profile.profileData.bio | limitTo: 140}}</p>
+			<div class="user-stats">
+				<div class="user-stat user-stat-border">
+					<h2>{{profile.profileData.followers.length}}</h2>
+					Followers
+				</div>
+				<div class="user-stat user-stat-border">
+					<h2>{{profile.profileData.favorites.length}}</h2>
+					Stars
+				</div>
+				<div class="user-stat">
+					<h2>{{profile.profileData.uploads.length}}</h2>
+					Scripts
+				</div>
+			</div>
+			<div class="profile-upload-btn" ng-show="shared.profileUpload" ng-click="shared.uploadScriptProfile()"><i class="ion-ios-upload-outline"></i> Upload a Script</div>
+			<div class="profile-upload-btn" ng-show="shared.profileFollow"><i class="ion-plus-round"></i> Follow</div>
+		</div>
+		<div class="user-action-wrap">
+			<div class="user-action"><i class="ion-share"></i></div>
+			<div class="user-action"><i class="ion-ios-email-outline"></i></div>
+			<div class="user-action"><i class="ion-social-twitter-outline"></i></div>
+		</div>
+	</div>
+</div>
+<div class="profile-script-section">
+	<div class="profile-script-wrap">
+		<div class="profile-tabs">
+			<div class="profile-tab">
+				MY ACTIVITY
+			</div>
+			<div class="profile-tab">
+				MY SCRIPTS ({{profile.profileData.uploads.length}})
+			</div>
+			<div class="profile-tab">
+				PURCHASED SCRIPTS ({{profile.profileData.purchases.length}})
+			</div>
+		</div>
+
+
+		<div class="trend-script-wrap" ng-repeat="script in profile.profileScripts | orderBy:'created':true">
+			<h4 class="script-title" ng-click="profile.checkOutScript(script)">{{script.title}}</h4>
+			<div class="shared-btn profile-read-btn" ng-click="profile.checkOutScript(script)"><i class="ion-ios-book-outline"></i> READ</div>
+			<p class="">{{script.description | limitTo: 380}}</p>
+			</span>
+			<div class="row user-snap">
+				<div class="col-md-5">
+					<img ng-src="{{script.author.avatarImg}}">
+					<span class="font-italic">by</span> {{script.author.firstName}} {{script.author.lastName}}
+				</div>
+				<div class="col-md-7">
+					<i class="ion-ios-pricetag-outline"></i>
+					<span class="font-italic">{{script.type}}</span>
+				</div>
+			</div>
+			<div class="row script-action-bar">
+				<div class="col-md-4">
+					<!-- If favMatch === true show solid star -->
+					<span ng-if="script.favMatch"><i class="ion-android-star" ng-click="profile.removeFavorite(script._id)"></i></span>
+					<!-- If favMatch === false show empty star -->
+					<span ng-if="!script.favMatch"><i class="ion-android-star-outline" ng-click="profile.addFavorite(script._id)"></i></span>
+					Favorite
+					<span class="trending-stats">{{script.favorites.length}} <span class="responsive-remove-words">Favorited</span></span>
+				</div>
+				<div class="col-md-4">
+					<i class="ion-social-usd-outline"></i>
+					Purchased
+					<span class="trending-stats">{{script.purchases.length}} <span class="responsive-remove-words">Purchased</span></span>
+				</div>
+				<div class="col-md-4">
+					<i class="ion-ios-circle-outline"></i>
+					Rights
+					<span class="trending-stats">Not <span class="responsive-remove-words">Acquired</span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div ui-view></div>
+
+
+
+
+
+

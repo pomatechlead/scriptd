@@ -1,0 +1,57 @@
+/*UPLOAD SCRIPT PDF*/
+
+.upload-pdf-view .pdf-nav-wrap {
+	padding-top: 20px;
+}
+
+.upload-pdf-view .pdf-nav-wrap div {
+	display: inline-block;
+	margin-right: 30px;
+}
+
+.upload-pdf-view .page-zoom {
+	margin-right: 0;
+}
+
+.upload-pdf-view .script-page-input {
+	margin-left: 5px;
+	width: 30px;
+	text-align: center;
+}
+
+.upload-pdf-view .pdf-hr {
+	margin: 10px 0;
+}
+
+
+
+/*SCRIPT PAGE PDF*/
+
+.script-modal-body .pdf-nav-wrap {
+	padding-top: 20px;
+	text-align: right;
+}
+
+.script-modal-body .pdf-nav-wrap div {
+	display: inline-block;
+	margin-right: 30px;
+}
+
+.script-modal-body .page-zoom {
+	margin-right: 0;
+}
+
+.script-modal-body .script-page-input {
+	margin-left: 5px;
+	width: 30px;
+	text-align: center;
+}
+
+.script-modal-body .pdf-hr {
+	width: 100%;
+	margin: 10px 0;
+}
+
+.pdf-container {
+	text-align: center;
+}

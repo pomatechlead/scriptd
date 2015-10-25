@@ -1,0 +1,33 @@
+<section class="upload-page-wrap">
+	<header>
+		<div class="upload-header-title">
+			<p>Upload Your Script</p>
+		</div>
+		<div class="dotted-line"></div>
+		<div class="upload-confirm-row">
+			<div class="file-name">FILE:<span> {{up.fileName}}</span></div>
+			<div class="shared-btn confirm-btn" ng-click="up.confirmScript()">CONFIRM FILE</div>
+			<div class="upload-page-cancel" ng-click="shared.goHome()">
+				<i class="ion-ios-close-outline"></i> Cancel
+			</div>
+		</div>
+	</header>
+	<div class="upload-preview-section">
+		<!-- <p class="upload-preview-directions">Click on a page to expand.</p> -->
+<!-- 		<div class="upload-img-section">
+			<div class="upload-img-wrap" ng-repeat="img in up.scriptImages">
+				<img ng-src="{{img.image}}"/>
+				<div class="page-number">{{img.num[0]}}</div>
+			</div>
+		</div> -->
+		<div class="upload-pdf-view">
+
+			<ng-pdf template-url="/shared/vendors/pdfjs/pdf.html" canvasid="pdf" scale="1.3"></ng-pdf>
+			<!-- <canvas id="pdf-canvas"></canvas> -->
+
+			<!-- <object data="/scripts/getUpload" type="application/pdf">
+				<param name="view" value="Fit">
+			</object> -->
+		</div>
+	</div>
+</section>

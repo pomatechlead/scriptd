@@ -1,0 +1,52 @@
+<div class="modal-cancel-btn upload-cancel" ng-click="shared.closeModal()">
+	<i class="ion-ios-close-outline"></i><span class="font-italic">Cancel</span>
+</div>
+
+<div class="upload-modal-warp modal-fade">
+	<form name="uploadScript" novalidate show-errors>
+		<div class="upload-top-section">
+			<div class="form-group" show-errors>
+				<input ng-model="up.script.title" name="scriptTitle" placeholder="Title Here" class="upload-title" required>
+			</div>
+			<div class="form-group" show-errors>
+				<select ng-model="up.genre" name="scriptGenre">
+					<option value="" disabled selected>CHOOSE A GENRE</option>
+					<option value="Comedy">Comedy</option>
+					<option value="Drama">Drama</option>
+				</select>
+			</div>
+			<div class="form-group" show-errors>
+				<select ng-model="up.script.category" name="scriptCategory">
+					<option value="" disabled selected>CHOOSE A CATEGORY</option>
+					<option value="Film">Film</option>
+					<option value="TV">TV</option>
+					<option value="Web">Web</option>
+				</select>
+			</div>
+		</div>
+		<div class="upload-middle-section">
+			LOG LINE
+			<div class="form-group" show-errors>
+				<textarea ng-model="up.script.description" name="scriptDescription" rows="3" required>
+
+				</textarea>
+			</div>
+			<p class="help-block" ng-if="uploadScript.scriptTitle.$error.required || uploadScript.scriptDescription.$error.required">* Oops, please fill out the above missing info.</p>
+		</div>
+		<div class="upload-footer-section">
+			<div class="upload-footer-btn">
+				<input type="file" class="custom-file-input" file-input="up.files" required>
+			</div>
+			<div class="upload-directions">
+		      <p>PDF FILES ONLY</p>
+		      <p>Upload your whole script and we'll harvest the first 10 pages for users to preview.</p>
+		    </div>
+		    <div ng-click="up.submitScript()" ng-show="up.uploadDisable" class="shared-btn next-upload-btn">
+				NEXT
+			</div>
+			<div ng-hide="up.uploadDisable" class="unload-disable">
+				<i class="ion-aperture"></i>
+			</div>
+		</div>
+	</form>
+</div>

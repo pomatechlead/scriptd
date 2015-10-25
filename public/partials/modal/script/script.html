@@ -1,0 +1,68 @@
+<style>
+body {
+	overflow: hidden;
+}
+</style>
+
+<div class="modal-cancel-btn script-cancel" ng-click="shared.closeModal()">
+	<i class="ion-ios-close-outline"></i><span class="font-italic">Cancel</span>
+</div>
+<div class="script-modal-warp modal-fade">
+	<div class="script-modal-header">
+		<div class="trending-stats">{{scr.currentResult.created | date:'longDate'}}</div>
+		<h4 class="script-title">{{scr.currentResult.title}}</h4>
+		<div class="row user-snap">
+			<div class="col-md-5">
+				<img ng-src="{{scr.author.avatarImg}}">
+				<span class="font-italic">by</span> {{scr.currentResult.author.firstName}} {{scr.currentResult.author.lastName}}
+			</div>
+			<div class="col-md-7">
+				<i class="ion-ios-pricetag-outline"></i>
+				<span class="font-italic">{{scr.currentResult.category}} {{scr.currentResult.genres[0]}}</span>
+			</div>
+		</div>
+	</div>
+	<div class="script-modal-middle">
+		<div class="row script-action-bar script-modal-section-padding">
+			<div class="col-md-4">
+				<!-- If favMatch === true show solid star -->
+				<span ng-if="scr.currentResult.favMatch"><i class="ion-android-star" ng-click="scr.removeFavorite(scr.currentResult._id)"></i></span>
+				<!-- If favMatch === false show empty star -->
+				<span ng-if="!scr.currentResult.favMatch"><i class="ion-android-star-outline" ng-click="scr.addFavorite(scr.currentResult._id)"></i></span>
+				Favorite
+				<span class="trending-stats">{{scr.currentResult.favorites.length}} <span class="responsive-remove-words">Favorited</span></span>
+			</div>
+			<div class="col-md-4">
+				<i class="ion-social-usd-outline"></i>
+				Purchased
+				<span class="trending-stats">{{scr.currentResult.purchases.length}} <span class="responsive-remove-words">Purchased</span></span>
+			</div>
+			<div class="col-md-4">
+				<i class="ion-ios-circle-outline"></i>
+				Rights
+				<span class="trending-stats">Not <span class="responsive-remove-words">Acquired</span></span>
+			</div>
+		</div>
+		<div class="script-modal-section-padding log-wrapper">
+			<h4>LOG LINE</h4>
+			<p class="font-italic font-serif">{{scr.currentResult.description}}</p>
+		</div>
+	</div>
+	<div class="script-modal-body">
+		<p class="script-preview-title">SCRIPT PREVIEW</p>
+		<ng-pdf template-url="/shared/vendors/pdfjs/pdf.html" canvasid="pdf" scale="1.3"></ng-pdf>
+		<!-- <object data="//scriptduploads.s3.amazonaws.com/sample-1423754231904.pdf" type="application/pdf" width="100%" height="700px"> </object> -->
+	</div>
+</div>
+
+<div class="script-modal-footer">
+	<div class="footer-modal-btn-wrap">
+		<div class="footer-modal-btn"><i class="ion-ios-book-outline"></i> FULL SCRIPT</div>
+		<div class="footer-modal-btn"><i class="ion-ios-circle-outline"></i> INQUIRE ABOUT RIGHTS</div>
+	</div>
+</div>
+
+
+
+
+
